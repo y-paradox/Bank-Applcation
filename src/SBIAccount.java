@@ -55,6 +55,16 @@ public class SBIAccount implements BankInterface{
     }
 
     @Override
+    public String name() {
+        return null;
+    }
+
+    @Override
+    public long phoneNumber() {
+        return 0;
+    }
+
+    @Override
     public int getBalance() {
         return this.balance;
     }
@@ -82,7 +92,7 @@ public class SBIAccount implements BankInterface{
     }
 
     @Override
-    public double calculateInterest(int time) {
-        return (balance*rateOfInterest*time)/100.0;
+    public float calculateInterest(float time) {
+        return (float) ((balance*rateOfInterest*time)/100.0);
     }
 }
